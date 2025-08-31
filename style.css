@@ -26,8 +26,9 @@ body {
 .foto {
   max-width: 900px;
   height: auto;
-  border: 2px solid #000;
-  filter: grayscale(100%); /* Preto e branco */
+  border: none;
+  filter: grayscale(100%); 
+  background: none; /* Preto e branco */
 }
 
 .texto {
@@ -48,5 +49,6 @@ body {
 .site {
   font-weight: bold;
 }
+
 
 
