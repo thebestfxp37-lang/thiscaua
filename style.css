@@ -18,7 +18,7 @@ body {
     width: 80%;
     max-width: 900px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     overflow: hidden;
 }
@@ -50,3 +50,4 @@ body {
     font-size: 1rem;
     line-height: 1.6;
 }
+
