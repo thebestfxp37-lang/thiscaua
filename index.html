@@ -1,77 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ever Dream This Man?</title>
+<p>thiscaua37.onrender.com</p>
+<button id="showComments">Conte seu relato</button>
+<div id="hyvor-talk-view" style="display: none;"></div>
 
-    <meta name="description" content="Site oficial do This Caua 37 - inspirado no fenômeno 'This Man'. Descubra o mistério por trás dessa figura.">
-    <meta name="keywords" content="this caua 37, caua37, this man, sonho, render, site misterioso">
-    <meta name="author" content="This Caua 37">
+<script>
+  // Easter egg da foto
+  document.querySelector(".foto").addEventListener("click", () => {
+    console.log("🥸");
+    alert("🥸");
+  });
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="left">
-            <img src="foto.png" alt="This caua 37" class="foto">
-        </div>
-        <div class="right">
-            <h1>EVER DREAM THIS MAN?</h1>
+  // Botão de textos
+  const textos = [
+    "Every night, all over the world, hundreds of people see this face in their dreams. If this man appears in your dreams too, or if you have any information that can help us identify him, please contact us.",
+    "This phenomenon started in 2009 when several patients described the same man in their dreams to a psychiatrist in Novo Hamburgo, Brazil.",
+    "Since then, thousands of people around the world claim to have seen him in dreams, despite never meeting in real life.",
+    "Do you know this man? Share your story."
+  ];
 
-            <!-- container com texto + seta -->
-            <div class="texto-container">
-                <p id="texto">
-                    Every night, all over the world, hundreds of people see this face in their dreams. 
-                    If this man appears in your dreams too, or if you have any information that can help us identify him, 
-                    please contact us.
-                </p>
-                <button id="nextBtn" class="arrow">➡</button>
-            </div>
+  let indice = 0;
+  const textoElemento = document.getElementById("texto");
+  const botao = document.getElementById("nextBtn");
 
-            <p>thiscaua37.onrender.com</p>
-        </div>
-    </div>
+  botao.addEventListener("click", () => {
+    indice = (indice + 1) % textos.length; 
+    textoElemento.textContent = textos[indice];
+  });
 
-    <div id="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-    <script>
-      commentBox("5764083601113088-proj"); 
-    </script>
+  // Botão "Conte seu relato" para mostrar Hyvor Talk
+  document.getElementById("showComments").addEventListener("click", function() {
+    var commentBox = document.getElementById("hyvor-talk-view");
+    commentBox.style.display = "block"; // mostra a caixa
 
-    <script>
-      document.querySelector(".foto").addEventListener("click", () => {
-        console.log("🥸");
-        alert("🥸");
-      });
-
-      const textos = [
-        "Every night, all over the world, hundreds of people see this face in their dreams. If this man appears in your dreams too, or if you have any information that can help us identify him, please contact us.",
-        "This phenomenon started in 2009 when several patients described the same man in their dreams to a psychiatrist in Novo Hamburgo, Brazil.",
-        "Since then, thousands of people around the world claim to have seen him in dreams, despite never meeting in real life.",
-        "Do you know this man? Share your story."
-      ];
-
-      let indice = 0;
-      const textoElemento = document.getElementById("texto");
-      const botao = document.getElementById("nextBtn");
-
-      botao.addEventListener("click", () => {
-        indice = (indice + 1) % textos.length; 
-        textoElemento.textContent = textos[indice];
-      });
-    </script>
-<div id="hyvor-talk-view"></div>
-<script type="text/javascript">
-var HYVOR_TALK_WEBSITE = 14036; // substitua pelo seu ID
-(function() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://talk.hyvor.com/web-api/embed.js';
-    s.async = true;
-    (d.head || d.body).appendChild(s);
-})();
+    // Inicializa Hyvor Talk só na primeira vez
+    if (!window.hyvorTalkLoaded) {
+        window.hyvorTalkLoaded = true;
+        var HYVOR_TALK_WEBSITE = 14036; // substitua pelo seu ID
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://talk.hyvor.com/web-api/embed.js';
+            s.async = true;
+            (d.head || d.body).appendChild(s);
+        })();
+    }
+  });
 </script>
-</body>
-</html>
-
-
