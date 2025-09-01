@@ -65,6 +65,30 @@ body {
 .arrow:hover {
     transform: scale(1.2);
 }
+.texto-container {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.texto-container p {
+    flex: 1; 
+}
+
+.arrow {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+
 
 
 
