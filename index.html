@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,52 +71,8 @@ var HYVOR_TALK_WEBSITE = 14036; // substitua pelo seu ID
     s.async = true;
     (d.head || d.body).appendChild(s);
 })();
-<p>thiscaua37.onrender.com</p>
-<button id="showComments">Conte seu relato</button>
-<div id="hyvor-talk-view" style="display: none;"></div>
-
-<script>
-  // Easter egg da foto
-  document.querySelector(".foto").addEventListener("click", () => {
-    console.log("🥸");
-    alert("🥸");
-  });
-
-  // Botão de textos
-  const textos = [
-    "Every night, all over the world, hundreds of people see this face in their dreams. If this man appears in your dreams too, or if you have any information that can help us identify him, please contact us.",
-    "This phenomenon started in 2009 when several patients described the same man in their dreams to a psychiatrist in Novo Hamburgo, Brazil.",
-    "Since then, thousands of people around the world claim to have seen him in dreams, despite never meeting in real life.",
-    "Do you know this man? Share your story."
-  ];
-
-  let indice = 0;
-  const textoElemento = document.getElementById("texto");
-  const botao = document.getElementById("nextBtn");
-
-  botao.addEventListener("click", () => {
-    indice = (indice + 1) % textos.length; 
-    textoElemento.textContent = textos[indice];
-  });
-
-  // Botão "Conte seu relato" para mostrar Hyvor Talk
-  document.getElementById("showComments").addEventListener("click", function() {
-    var commentBox = document.getElementById("hyvor-talk-view");
-    commentBox.style.display = "block"; // mostra a caixa
-
-    // Inicializa Hyvor Talk só na primeira vez
-    if (!window.hyvorTalkLoaded) {
-        window.hyvorTalkLoaded = true;
-        var HYVOR_TALK_WEBSITE = 14036; // substitua pelo seu ID
-        (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://talk.hyvor.com/web-api/embed.js';
-            s.async = true;
-            (d.head || d.body).appendChild(s);
-        })();
-    }
-  });
 </script>
 </body>
 </html>
+
 
